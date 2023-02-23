@@ -6,6 +6,7 @@ function WeatherCard({data}) {
       <div className="card">
         <div className="titolo">
           <h1 className="text-2xl text-blue-50">{data ? data.resolvedAddress : 'METEO'}</h1>
+          <p>{data.description}</p>
         </div>
       </div>
     </div>

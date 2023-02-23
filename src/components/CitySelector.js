@@ -1,11 +1,12 @@
 import {useState} from "react";
 
-function WeatherForm({inputValue, setInputValue, setCity}) {
+function CitySelector({onCitySelected}) {
 
+  const [inputValue, setInputValue] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
-    setCity(inputValue);
     setInputValue('');
+    onCitySelected(inputValue);
   }
 
 
@@ -24,4 +25,4 @@ function WeatherForm({inputValue, setInputValue, setCity}) {
   );
 }
 
-export default WeatherForm;
+export default CitySelector;
